@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карусель для Дня Космонавтики</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('https://example.com/space-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 700px; /* фиксированная ширина контейнера */
+            height: 410px; /* фиксированная высота контейнера */
+            margin: 100px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%; /* ширина карусели равна ширине контейнера */
+            height: 100%; /* высота карусели равна высоте контейнера */
+        }
+
+        .carousel-slide {
+            min-width: 100%; /* каждый слайд занимает 100% ширины контейнера */
+            height: 100%; /* каждый слайд имеет высоту контейнера */
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%; /* изображение заполняет весь контейнер по высоте */
+            object-fit: cover; /* обрезаем изображение по бокам, чтобы оно заполнило контейнер */
+            border-radius: 10px;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px; /* позиционирование кнопки слева */
+        }
+
+        .next {
+            right: 10px; /* позиционирование кнопки справа */
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419195/1.jpg" alt="Фото 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419183/2.jpg" alt="Фото 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419588/3.jpg" alt="Фото 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419195/1.jpg" alt="Фото 4">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+
+            currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+            const carousel = document.querySelector('.carousel');
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(() => moveSlide(1), 5000); // Автоматический переход через 5 секунд
+    </script>
+</body>
+</html>
