@@ -20,9 +20,8 @@
 
         .carousel-container {
             position: relative;
-            max-width: 700px; /* фиксированная ширина контейнера */
-            height: 420px; /* фиксированная высота контейнера */
-            /*margin: 10px auto;*/
+            max-width: 700px;
+            height: 420px;
             overflow: hidden;
             border-radius: 10px;
         }
@@ -30,21 +29,22 @@
         .carousel {
             display: flex;
             transition: transform 0.5s ease;
-            width: 100%; /* ширина карусели равна ширине контейнера */
-            height: 100%; /* высота карусели равна высоте контейнера */
+            width: 100%;
+            height: 100%;
         }
 
         .carousel-slide {
-            min-width: 100%; /* каждый слайд занимает 100% ширины контейнера */
-            height: 100%; /* каждый слайд имеет высоту контейнера */
+            min-width: 100%;
+            height: 100%;
             overflow: hidden;
         }
 
         .carousel-slide img {
             width: 100%;
-            height: 100%; /* изображение заполняет весь контейнер по высоте */
-            object-fit: cover; /* обрезаем изображение по бокам, чтобы оно заполнило контейнер */
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
+            cursor: pointer;
         }
 
         button {
@@ -62,11 +62,11 @@
         }
 
         .prev {
-            left: 10px; /* позиционирование кнопки слева */
+            left: 10px;
         }
 
         .next {
-            right: 10px; /* позиционирование кнопки справа */
+            right: 10px;
         }
 
         button:hover {
@@ -77,17 +77,84 @@
 <body>
     <div class="carousel-container">
         <div class="carousel">
+            <!-- Слайды с изображениями -->
             <div class="carousel-slide">
-                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419195/1.jpg" alt="Фото 1">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272320/edec69dfea7aeda6c06f3e0bde274268-0.jpg" alt="Фото 1" onclick="openInNewWindow(this)">
             </div>
             <div class="carousel-slide">
-                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419183/2.jpg" alt="Фото 2">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272330/edec69dfea7aeda6c06f3e0bde274268-1.jpg" alt="Фото 2" onclick="openInNewWindow(this)">
             </div>
             <div class="carousel-slide">
-                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419588/3.jpg" alt="Фото 3">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272334/edec69dfea7aeda6c06f3e0bde274268-2.jpg" alt="Фото 3" onclick="openInNewWindow(this)">
             </div>
             <div class="carousel-slide">
-                <img src="https://db.kchr.muzkult.ru/media/2025/04/08/1323419195/1.jpg" alt="Фото 4">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272378/edec69dfea7aeda6c06f3e0bde274268-3.jpg" alt="Фото 4" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272381/edec69dfea7aeda6c06f3e0bde274268-4.jpg" alt="Фото 5" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272274/edec69dfea7aeda6c06f3e0bde274268-5.jpg" alt="Фото 6" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272279/edec69dfea7aeda6c06f3e0bde274268-6.jpg" alt="Фото 7" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272284/edec69dfea7aeda6c06f3e0bde274268-7.jpg" alt="Фото 8" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272261/edec69dfea7aeda6c06f3e0bde274268-8.jpg" alt="Фото 9" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272265/edec69dfea7aeda6c06f3e0bde274268-9.jpg" alt="Фото 10" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272309/edec69dfea7aeda6c06f3e0bde274268-10.jpg" alt="Фото 11" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272316/edec69dfea7aeda6c06f3e0bde274268-11.jpg" alt="Фото 12" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272290/edec69dfea7aeda6c06f3e0bde274268-12.jpg" alt="Фото 13" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272300/edec69dfea7aeda6c06f3e0bde274268-13.jpg" alt="Фото 14" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272214/edec69dfea7aeda6c06f3e0bde274268-14.jpg" alt="Фото 15" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272217/edec69dfea7aeda6c06f3e0bde274268-15.jpg" alt="Фото 16" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272192/edec69dfea7aeda6c06f3e0bde274268-16.jpg" alt="Фото 17" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272200/edec69dfea7aeda6c06f3e0bde274268-17.jpg" alt="Фото 18" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272246/edec69dfea7aeda6c06f3e0bde274268-18.jpg" alt="Фото 19" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272254/edec69dfea7aeda6c06f3e0bde274268-19.jpg" alt="Фото 20" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272235/edec69dfea7aeda6c06f3e0bde274268-20.jpg" alt="Фото 21" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272146/edec69dfea7aeda6c06f3e0bde274268-21.jpg" alt="Фото 22" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272148/edec69dfea7aeda6c06f3e0bde274268-22.jpg" alt="Фото 23" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272159/edec69dfea7aeda6c06f3e0bde274268-23.jpg" alt="Фото 24" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272129/edec69dfea7aeda6c06f3e0bde274268-24.jpg" alt="Фото 25" onclick="openInNewWindow(this)">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://db.kchr.muzkult.ru/media/2025/04/09/1324272136/edec69dfea7aeda6c06f3e0bde274268-25.jpg" alt="Фото 26" onclick="openInNewWindow(this)">
             </div>
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -104,6 +171,11 @@
             currentIndex = (currentIndex + step + totalSlides) % totalSlides;
             const carousel = document.querySelector('.carousel');
             carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function openInNewWindow(image) {
+            const imageUrl = image.src;
+            window.open(imageUrl, '_blank');
         }
 
         setInterval(() => moveSlide(1), 5000); // Автоматический переход через 5 секунд
